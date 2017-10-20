@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
+@font-face{
+    font-family: "ArialRegular";
+    src: url("../fonts/ArialRegular.eot") format("eot");
+    src: url("../fonts/ArialRegular.ttf") format("ttf");    
+    src: url("../fonts/WebFont.woff") format("woff");
+}
+body {
+    background-image: url(../img/bg_sky.png);
+    margin: 0;
+}
+.wrapper {
+    position: relative;
+    max-width: 1024px;
+    height: 1977px;
+    margin: auto;  
+}
+/* ===================HEADER========= */
+header {
+    position: relative;
+    max-width: 1024px;
+    height: 235px;
+    margin: auto;
+}
+/* -------------ЛОГОТИП-------------- */
+.logo {
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    top: 50%;
+    left: 50%;    
+    transform: translate( -50%, -50%);     
+    border-radius: 75px;
+    background-color: #fff;
+}
+.logoTxt {
+    margin: 0;
+}
+.logoTxt > a {
+    font-family: 'Dorsa', sans-serif;
+    display: block;
+    font-size: 60px;    
+    font-weight: 300;
+    text-align: center;
+    line-height: 138px;
+    text-transform: uppercase; 
+    text-decoration: none;
+    color: #263555;   
+}
+
+
+/* ----------------ВЕРХНЕЕ МЕНЮ------------- */
+.leftTopMenu,
+.rightTopMenu {
+    display: inline-block;
+    position: absolute;
+    height: 235px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    list-style: none;
+}
+.leftTopMenu {
+    left: 66px;
+}
+.rightTopMenu {
+    right: 66px;
+}
+.leftTopMenuItemDrop,
+.leftTopMenuItem,
+.rightTopMenuItem {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 28px;
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 95px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.leftTopMenuItemDrop,
+.leftTopMenuItem,
+.rightTopMenuItem {
+    position: relative;    /*для абсолютного позиц-ия выпадающего меню */
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.leftTopMenuItem > a,
+.leftTopMenuItemDrop > a,
+.rightTopMenuItem > a {
+    text-decoration: none;
+    color: #fff;
+}
+.leftTopMenuItem > a:hover,
+.leftTopMenuItemDrop > a:hover,
+.rightTopMenuItem > a:hover {
+    color: #263555;
+}
+/* ----------------ВСПЛЫВАЮЩЕЕ МЕНЮ-------------- */
+.topDropMenu {
+    display: none;
+    width: 66px;
+    height: 84px;
+    vertical-align: top;
+    background-color: #fff;
+}
+.triangleTopDropMenu {
+    position: absolute;
+    display: none;
+    width: 0;
+    height: 0;
+    top: 42px;
+    left: 25px;
+    border-style: solid;
+    border-width: 0 2.5px 3px 2.5px;
+    border-color: transparent transparent #fff transparent;
+}
+.leftTopMenuItemDrop:hover > .topDropMenu {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: -6px;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 2px;
+}
+.leftTopMenuItemDrop:hover > .triangleTopDropMenu {
+    display: inline-block;
+}
+.topDropMenuItem {
+    line-height: 20px;
+    margin-top: 2px;
+    list-style: none;    
+}
+.topDropMenuItem > a {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px; 
+    text-decoration: none;
+    color: #6b7488;
+}
+.topDropMenuItem > a:hover {
+    text-decoration: underline;
+}
+
+/*================MAIN=========== */
+
+main {
+    max-width: 1024px;
+    height: 1170px;
+    margin: auto;
+    background-color: #fff;
+    border-top: 1px solid #f1f7fb
+}
+footer {
+    position: absolute;
+    width: 1024px;
+    height: 133px;
+    bottom: 0;
+    margin: auto;
+    background-color: #30455b;
+}
+
+/* =============КНОПКА НА НАЧАЛО ЭКРАНА========== */
+
+.goTopButton {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 22px;
+    right: 252px;
+    border-radius: 15px;
+    background-color: #38afe5;
+    border: none;
+}
+.goTopArrow {
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: top;
+    color: #fff; 
+    transform: scale(1.5, 0.7);
+}
