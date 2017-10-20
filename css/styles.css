@@ -136,6 +136,10 @@ header {
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 20px; 
     text-decoration: none;
+<<<<<<< HEAD
+    color: #6b7488;
+=======
+>>>>>>> ea1013752a10a4345be1b99047dfefa02cfe0c00
 }
 .topDropMenuItem > a:hover {
     text-decoration: underline;
