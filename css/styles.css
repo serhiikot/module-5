@@ -1,3 +1,9 @@
+@font-face{
+    font-family: "ArialRegular";
+    src: url("../fonts/ArialRegular.eot") format("eot");
+    src: url("../fonts/ArialRegular.ttf") format("ttf");    
+    src: url("../fonts/WebFont.woff") format("woff");
+}
 body {
     background-image: url(../img/bg_sky.png);
     margin: 0;
@@ -145,6 +151,8 @@ main {
     background-color: #fff;
     border-top: 1px solid #f1f7fb
 }
+
+/* ================СЛАЙДЕр============== */
 .slider {
     position: relative;
     width: 902px;
@@ -260,9 +268,97 @@ main {
     content: "🡪";
     right: 23px;
 }
+.previousSlide:active,
+.nextSlide:active {
+    background-color: #40c1fb;
+}
 
+/* ------------TOP DESTINATION----------- */
+.topDestination {
+    margin: 57px 61px 0 61px;
+}
+.destinationHeader {
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #263555;
+}
+.cities {
+    position: relative;
+    width: 902px;
+    height: 270px;
+    padding: 0;
+    font-size: 0;
+}
+.cities > li {
+    display: inline-block;
+    background-color: #000;
+    width: 288px;
+    height: 270px;
+}
+.venice {
+    position: absolute;
+    left: 0;
+    background-image: url(../img/venice_pic.png);
+}
+.newYork {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    background-image: url(../img/newYork_pic.png);   
+}
+.paris {
+    position: absolute;
+    right: 0;
+    background-image: url(../img/paris_pic.png);
+}
+
+/* ---------------ABOUT CITIES-------------- */
+.dropVeniceGuide,
+.dropNewYorkGuide,
+.dropParisGuide {
+    display: none;
+    width: 147px;
+    height: 270px;
+    position: relative;
+    left: 0;
+    background-color: #193149;
+}
+.cities h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 60px;
+}
+.cities p {
+    font-family: "ArialRegular", sans-serif;
+    font-size: 10px;
+    text-align: justify;
+    color: #cbc6c6;
+    margin: 7px;
+    line-height: 1.5;
+}
+.cities div {
+    position: absolute;
+    width: 63px;
+    height: 22px;
+    right: 12px;
+    bottom: 21px;
+    background-image: url(../img/details_button.png);
+}
+.venice:hover > .dropVeniceGuide,
+.newYork:hover > .dropNewYorkGuide,
+.paris:hover > .dropParisGuide {
+    display: block;
+} 
 /*================FOOTER=========== */
-
 footer {
     position: absolute;
     width: 1024px;
@@ -283,6 +379,10 @@ footer {
     border-radius: 15px;
     background-color: #38afe5;
     border: none;
+    z-index: 5;
+}
+.goTopButton > a {
+    display: block;
 }
 .goTopArrow {
     margin: 0;
@@ -291,4 +391,5 @@ footer {
     vertical-align: top;
     color: #fff; 
     transform: scale(1.5, 0.7);
+    text-decoration: none;
 }
