@@ -19,8 +19,6 @@
                 <ul class="leftTopMenu">
                     <li class="leftTopMenuItem"><a href="#">home</a></li>
                     <li class="leftTopMenuItemDrop">
-                        <div class="triangleTopDropMenu">
-                        </div>
                         <ul class="topDropMenu">
                             <li class="topDropMenuItem"><a href="#">agency</a></li>
                             <li class="topDropMenuItem"><a href="#">news</a></li>
@@ -39,12 +37,22 @@
         </header>
         <main>
             <section class="slider">
-                        
+                <ul id="slides">
+                    <li class="slide showing"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                </ul>
+                <h2 class="plentyOfPlaces">there are plenty of places</h2>
+                <h2 class="worthSeeing">that are worth seeing</h2>  
+                <div class="previousSlide" id="previous"></div>  
+                <div class="nextSlide" id="next"></div>  
             </section>
             <section class="topDestination">
-                    <div></div>
-                    <div></div>
-                    <div></div>   
+                <h2 class="destinationHeader">top destinations</h2>
+                <div class="venice"></div>
+                <div class="newYork"></div>
+                <div class="paris"></div>   
             </section>
         </main>
         <footer>
@@ -53,5 +61,6 @@
                 <p class="goTopArrow">&#708;</p> 
         </div>   
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
