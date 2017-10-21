@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One");
-@font-face{
-    font-family: "ArialRegular";
-    src: url("../fonts/ArialRegular.eot") format("eot");
-    src: url("../fonts/ArialRegular.ttf") format("ttf");    
-    src: url("../fonts/WebFont.woff") format("woff");
-}
 body {
     background-image: url(../img/bg_sky.png);
     margin: 0;
@@ -103,13 +96,14 @@ header {
     vertical-align: top;
     background-color: #fff;
 }
-.triangleTopDropMenu {
+.topDropMenu:before {
+    content: "";
     position: absolute;
     display: none;
     width: 0;
     height: 0;
-    top: 42px;
-    left: 25px;
+    top: -3px;
+    left: 31px;
     border-style: solid;
     border-width: 0 2.5px 3px 2.5px;
     border-color: transparent transparent #fff transparent;
@@ -124,7 +118,7 @@ header {
     vertical-align: top;
     border-radius: 2px;
 }
-.leftTopMenuItemDrop:hover > .triangleTopDropMenu {
+.leftTopMenuItemDrop:hover > .topDropMenu:before {
     display: inline-block;
 }
 .topDropMenuItem {
@@ -136,10 +130,7 @@ header {
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 20px; 
     text-decoration: none;
-<<<<<<< HEAD
     color: #6b7488;
-=======
->>>>>>> ea1013752a10a4345be1b99047dfefa02cfe0c00
 }
 .topDropMenuItem > a:hover {
     text-decoration: underline;
@@ -154,6 +145,124 @@ main {
     background-color: #fff;
     border-top: 1px solid #f1f7fb
 }
+.slider {
+    position: relative;
+    width: 902px;
+    height: 579px;
+    margin: 58px 61px 0 61px;
+    background-color: #fff;
+}
+
+/* ----------------ТЕКС СЛАЙДЕРА-------------- */
+.plentyOfPlaces,
+.worthSeeing {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+.plentyOfPlaces {
+    position: absolute;
+    width: 225px;
+    height: 60px;
+    top: 218px;
+    z-index: 4;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+}
+.worthSeeing {
+    position: absolute;
+    width: 276px;
+    height: 60px;
+    top: 279px;
+    z-index: 3;
+    
+    background-color: #38afe5;
+    font-size: 34px;
+}
+
+/* ----------------СЛАЙДЫ------------------- */
+#slides {
+    position: relative;
+    width: 902px;
+    height: 579px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+.slide:nth-of-type(1) {
+    background-image: url(../img/slide_1.png);
+}
+.slide:nth-of-type(2) {
+    background-image: url(../img/slide_2.png);
+}
+.slide:nth-of-type(3) {
+    background-image: url(../img/slide_3.png);
+}
+.slide:nth-of-type(4) {
+    background-image: url(../img/slide_4.png);
+}
+
+/* ---------------КНОПКА СЛАЙДЕРА------------ */
+.previousSlide,
+.nextSlide {
+    position: absolute;
+    width: 45px;
+    height: 90px; 
+    bottom: 39px;
+    background-color: #38afe5;
+    border: none;
+    z-index: 3;
+}
+.previousSlide {
+    left: 37px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+.nextSlide {
+    left: 82px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+.previousSlide:before,
+.nextSlide:before {
+    position: absolute;
+    bottom: 35px;
+    color: #c3e7f7;
+    z-index: 3;
+}
+.previousSlide:before {
+    content: "🡨";
+    left: 23px;
+}
+.nextSlide:before {
+    content: "🡪";
+    right: 23px;
+}
+
+/*================FOOTER=========== */
+
 footer {
     position: absolute;
     width: 1024px;
