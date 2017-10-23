@@ -173,6 +173,12 @@ main {
     padding: 0;
 }
 .plentyOfPlaces {
+    color: #263555;
+}
+.worthSeeing {
+    color: #fff;
+}
+.plentyOfPlaces {
     position: absolute;
     width: 225px;
     height: 60px;
