@@ -6,6 +6,8 @@
 }
 body {
     background-image: url(../img/bg_sky.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
 }
 .wrapper {
@@ -97,10 +99,16 @@ header {
 /* ----------------ВСПЛЫВАЮЩЕЕ МЕНЮ-------------- */
 .topDropMenu {
     display: none;
+    position: absolute;
     width: 66px;
     height: 84px;
+    top: 45px;
+    left: -6px;
+    padding-left: 0;
     vertical-align: top;
     background-color: #fff;
+    border-radius: 2px;
+    
 }
 .topDropMenu:before {
     content: "";
@@ -117,19 +125,20 @@ header {
 .leftTopMenuItemDrop:hover > .topDropMenu {
     display: block;
     position: absolute;
-    top: 45px;
-    left: -6px;
     padding: 0;
     text-align: center;
     vertical-align: top;
-    border-radius: 2px;
+    
+}
+.leftTopMenuItemDrop:hover {
+    height: 45px;
 }
 .leftTopMenuItemDrop:hover > .topDropMenu:before {
     display: inline-block;
 }
 .topDropMenuItem {
-    line-height: 20px;
-    margin-top: 2px;
+    line-height: 24px;
+    text-align: center;
     list-style: none;    
 }
 .topDropMenuItem > a {
